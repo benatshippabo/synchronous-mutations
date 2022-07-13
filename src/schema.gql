@@ -1,0 +1,15 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type Query {
+  hello: String!
+}
+
+type Mutation {
+  mutateDelayed(
+    """Delay duration in ms"""
+    duration: Int!
+  ): Int
+  mutate: Int
+}
