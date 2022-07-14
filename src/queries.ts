@@ -14,7 +14,12 @@ export class Queries {
 
   @Query(() => String)
   async helloDelayed(
-    @Args({ name: 'duration', type: () => Number }) duration: number
+    @Args({
+      name: 'duration',
+      type: () => Number,
+      description: 'Delay duration in ms',
+    })
+    duration: number
   ) {
     await new Promise((resolve) => setTimeout(resolve, duration));
 

@@ -4,7 +4,10 @@
 
 type Query {
   hello: String!
-  helloDelayed(duration: Float!): String!
+  helloDelayed(
+    """Delay duration in ms"""
+    duration: Float!
+  ): String!
 }
 
 type Mutation {
