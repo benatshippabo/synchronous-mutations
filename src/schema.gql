@@ -4,6 +4,7 @@
 
 type Query {
   hello: String!
+  helloDelayed(duration: Float!): String!
 }
 
 type Mutation {
