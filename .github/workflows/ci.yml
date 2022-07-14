@@ -1,0 +1,23 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  check-code-quality:
+    name: Check Code Quality
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Lint Code
+        run: yarn lint
+
+      - name: Check Types
+        run: yarn pnpify tsc --noEmit
+
+      - name: Run Unit Tests
+        run: yarn test

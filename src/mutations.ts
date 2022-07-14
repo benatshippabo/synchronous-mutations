@@ -3,14 +3,14 @@ import { Args, Int, Mutation, Resolver } from '@nestjs/graphql';
 
 @Resolver()
 export class Mutations {
-  private readonly logger = new Logger("Mutations");
+  private readonly logger = new Logger('Mutations');
 
   @Mutation(() => Int, { nullable: true })
   async mutateDelayed(
     @Args({
-      name: "duration",
+      name: 'duration',
       type: () => Int,
-      description: "Delay duration in ms",
+      description: 'Delay duration in ms',
     })
     duration
   ) {
@@ -22,7 +22,7 @@ export class Mutations {
 
   @Mutation(() => Int, { nullable: true })
   async mutate() {
-    this.logger.log("Non delayed mutation successful");
+    this.logger.log('Non delayed mutation successful');
 
     return null;
   }
