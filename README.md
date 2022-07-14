@@ -1,3 +1,9 @@
+<p align="center">
+  <a href="https://github.com/benatshippabo/synchronous-mutations/actions/workflows/ci.yml">
+    <img alt="dotfiles status" src="https://github.com/benatshippabo/synchronous-mutations/actions/workflows/ci.yml/badge.svg?branch=main">
+  </a>
+</p>
+
 # synchronous-mutations
 
 ## Description
