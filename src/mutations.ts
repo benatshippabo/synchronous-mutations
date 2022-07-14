@@ -1,7 +1,7 @@
 import { Logger } from '@nestjs/common';
 import { Args, Int, Mutation, Resolver } from '@nestjs/graphql';
 
-@Resolver(() => Int)
+@Resolver()
 export class Mutations {
   private readonly logger = new Logger("Mutations");
 
