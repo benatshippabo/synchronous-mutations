@@ -2,18 +2,18 @@
 # THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
 # ------------------------------------------------------
 
+type Mutation {
+  mutate: Int
+  mutateDelayed(
+    """Delay duration in ms"""
+    duration: Int!
+  ): Int
+}
+
 type Query {
   hello: String!
   helloDelayed(
     """Delay duration in ms"""
     duration: Float!
   ): String!
-}
-
-type Mutation {
-  mutateDelayed(
-    """Delay duration in ms"""
-    duration: Int!
-  ): Int
-  mutate: Int
 }

@@ -6,6 +6,13 @@ export class Mutations {
   private readonly logger = new Logger('Mutations');
 
   @Mutation(() => Int, { nullable: true })
+  async mutate() {
+    this.logger.log('Non delayed mutation successful');
+
+    return null;
+  }
+
+  @Mutation(() => Int, { nullable: true })
   async mutateDelayed(
     @Args({
       name: 'duration',
@@ -17,13 +24,6 @@ export class Mutations {
     await new Promise((resolve) => setTimeout(resolve, duration));
 
     this.logger.log(`Delayed mutation successful after ${duration}ms`);
-    return null;
-  }
-
-  @Mutation(() => Int, { nullable: true })
-  async mutate() {
-    this.logger.log('Non delayed mutation successful');
-
     return null;
   }
 }
